@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ボタンのスタイル */
+    .start-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid #3498db; /* ボーダーの色 */
+      color: #3498db; /* テキストの色 */
+      background-color: #ffffff; /* 背景色 */
+      border-radius: 5px; /* ボーダーの角を丸くする */
+      transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーション */
+    }
+
+    /* ホバー時のスタイル */
+    .start-button:hover {
+      background-color: #3498db;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <!-- スタート画面 -->
+  <div id="startScreen">
+    <h1>Welcome to the Game</h1>
+    <button class="start-button" onclick="startGame()">Start Game</button>
+  </div>
+
+  <!-- ゲーム画面（初期は非表示） -->
+  <div id="gameScreen" style="display: none;">
+    <h1>Game Screen</h1>
+    <!-- ここにゲームのコンテンツを配置 -->
+  </div>
+
+  <script>
+    function startGame() {
+      // スタート画面を非表示にし、ゲーム画面を表示
+      document.getElementById('startScreen').style.display = 'none';
+      document.getElementById('gameScreen').style.display = 'block';
+
+      // ここにゲームの初期化や処理を追加
+    }
+  </script>
+</body>
+</html>
